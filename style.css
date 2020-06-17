@@ -1,8 +1,77 @@
-html, body {
+html, body{
   margin: 0;
   padding: 0;
 }
-canvas {
-  display: block;
-  border : 8px solid maroon;
-} 
+canvas{
+  border: solid #f79533;
+  border-radius: 2em;
+  border-width: 0.2cm;
+  -webkit-animation: border_gradient 5s ease alternate infinite;
+}
+
+@-webkit-keyframes border_gradient {
+  0%{border: solid #f37055;border-width: 0.2cm;}
+  10%{border: solid #ef4e7b;border-width: 0.2cm;}
+  20%{border: solid #a166ab;border-width: 0.2cm;}
+  30%{border: solid #5073b8;border-width: 0.2cm;}
+  40%{border: solid #1098ad;border-width: 0.2cm;}
+  50%{border: solid #07b39b;border-width: 0.2cm;}
+  60%{border: solid #6fba82;border-width: 0.2cm;}
+}
+
+#title{
+  color:white;
+  font-family: 'Quicksand';
+  font-weight: 900;
+  font-size: 30px;
+
+  background: linear-gradient(270deg, #d5bd35, #afe471, #2ccaa2, #8ad3ee);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradient 10s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#over{
+  color:white;
+  font-family: 'Quicksand';
+  font-weight: 900;
+  font-size: 60px;
+
+  background: linear-gradient(270deg, #ec1818, #ec6e18, #ec9d18, #ecb918);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradient 10s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#restart{
+	width: 4cm;
+	height: 1cm;
+	display:inline-block;
+	border: none;
+	border-radius:2em;
+	font-family:'Quicksand',sans-serif;
+	font-weight:300;
+	font-size: 25px;
+	color:#FFFFFF;
+	background-color:#4eb5f1;
+	text-align:center;
+	transition: background-color 0.5s ease-in-out;
+	outline: none;
+}
+#restart:hover {
+	background-color: rgb(77, 212, 65);
+	outline: none;
+	transition: background-color 0.5s ease-in-out;
+}
+
+@-webkit-keyframes gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
